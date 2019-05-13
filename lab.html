@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <style> /* Aqui é onde vai o código em CSS, ele cuida do ESTILO da página */
+        @import url('https://fonts.googleapis.com/css?family=Muli'); /* fonte importada do google fonts */
+        table {
+         width:50%
+        }
+        th {
+            font-family: 'Muli', sans-serif;
+            background-color: lavender;
+            width:50px;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Essa parte do código é em HTML, a intenção é colocar cada matéria e seu respectivo
+     código na ID, depois, cada matéria passará o código dos seus pré requisito para uma
+     função que colore os quadrados-->
+
+<table>
+    <tr>
+        <th id="01"> Computação e Sociedade </th>
+        <th id="02"> Introdução a Programação </th>
+        <th id="03"> Calculo 1 </th>
+        <th id="04"> Fundamentos de Matemática</th>
+    </tr>
+     <tr>
+        <th id="05" onmouseover="mOver('04')" onmouseout="mOut('04')" >Arquitetura de Computadores</th>
+        <th id="06" onmouseover="mOver('02')" onmouseout="mOut('02')">Algoritmos e Estrutura de Dados 1</th>
+        <th id="07" onmouseover="mOver('03')" onmouseout="mOut('03')">Probabilidade e Estatistica</th>
+        <th id="08">Algebra Linear</th>
+        <th id="09" onmouseover="mOver('04')" onmouseout="mOut('04')" >Lógica Matemática</th>
+    </tr>
+    <tr>
+        <th id="10" onmouseover="mOver('02')" onmouseout="mOut('02')">Programação Orientada a Objetos</th>
+        <th id="11" onmouseover="mOver('06')" onmouseout="mOut('06')">Algoritmos e Estrutura de Dados 2</th>
+        <th id="12">OPTATIVA 1</th>
+        <th id="13" onmouseover="mOver('02')" onmouseout="mOut('02')">Linguagens e Paradigmas de Programação</th>
+        <th id="14">Engenharia de Software</th>
+    </tr>
+    <tr>
+        <th id="15" onmouseover="mOver2('04','11')" onmouseout="mOut2('04','11')" >Análise e Projeto de Algoritmos</th>
+        <th id="16">Interação Humano-Computador</th>
+        <th id="17">OPTATIVA 2</th>
+        <th id="18" onmouseover="mOver('09')" onmouseout="mOut('09')">Banco de Dados</th>
+        <th id="19" onmouseover="mOver2('14','10')" onmouseout="mOut2('14','10')" >Projeto de Software</th>
+    </tr>
+</table>
+<p></p>
+
+<!--Aqui é a parte das funções em JavaScript-->
+
+<script>
+function mOver(id) { //essa é a função de colorir quando o mouse tá em cima
+    document.getElementById(id).style.background = "aqua"
+}
+function mOut(id) { //essa função retorna os quadrados ao seu estado anterior
+    document.getElementById(id).style.background = "lavender"
+}
+//As duas funções a seguir são versões adaptadas da anterior para funcionar com dois requisitos
+function mOver2(id, id2) { //função de colorir
+    document.getElementById(id).style.background = "aqua"
+    document.getElementById(id2).style.background = "aqua"
+}
+function mOut2(id, id2) { //função para descolorir
+    document.getElementById(id).style.background = "lavender"
+    document.getElementById(id2).style.background = "lavender"
+}
+</script>
+
+</body>
+</html> 
