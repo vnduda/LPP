@@ -10,27 +10,48 @@
             background-color: lavender;
             width:50px;
             padding:30px;
+            border: 1px solid black;
+        }
+        h2 {
+            margin: 0 auto;
+            padding: 20px 0;    
+            color: #ffb6c1;
+            text-align: center;
+        }
+        h4 {
+            margin: 0 auto;
+            padding: 20px 0;    
+            color: #ffb6c1;
+            text-align: center;
+        }
+        html {
+            background-color: #111;
+        }
+        .table {
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
+    <h2> Grade curricular </h2>
+    <h4> Ao passar o mouse por cima das matérias, seus pré requisitos mudarão de cor</h4>
 </head>
 <body>
-
 <!-- Essa parte do código é em HTML, a intenção é colocar cada matéria e seu respectivo
      código na ID, depois, cada matéria passará o código dos seus pré requisito para uma
      função que colore os quadrados-->
 
-<table>
+<table class="table">
     <tr>
         <th id="01"> Computação e Sociedade </th>
         <th id="02"> Introdução a Programação </th>
-        <th id="03"> Calculo 1 </th>
+        <th id="03"> Cálculo 1 </th>
         <th id="04"> Fundamentos de Matemática</th>
     </tr>
      <tr>
         <th id="05" onmouseover="mOver('04')" onmouseout="mOut('04')" >Arquitetura de Computadores</th>
         <th id="06" onmouseover="mOver('02')" onmouseout="mOut('02')">Algoritmos e Estrutura de Dados 1</th>
-        <th id="07" onmouseover="mOver('03')" onmouseout="mOut('03')">Probabilidade e Estatistica</th>
-        <th id="08">Algebra Linear</th>
+        <th id="07" onmouseover="mOver('03')" onmouseout="mOut('03')">Probabilidade e Estatística</th>
+        <th id="08">Álgebra Linear</th>
         <th id="09" onmouseover="mOver('04')" onmouseout="mOut('04')" >Lógica Matemática</th>
     </tr>
     <tr>
@@ -54,15 +75,15 @@
 
 <script>
 function mOver(id) { //essa é a função de colorir quando o mouse tá em cima
-    document.getElementById(id).style.background = "aqua"
+    document.getElementById(id).style.background = "#ffb6c1"
 }
 function mOut(id) { //essa função retorna os quadrados ao seu estado anterior
     document.getElementById(id).style.background = "lavender"
 }
 //As duas funções a seguir são versões adaptadas da anterior para funcionar com dois requisitos
 function mOver2(id, id2) { //função de colorir
-    document.getElementById(id).style.background = "aqua"
-    document.getElementById(id2).style.background = "aqua"
+    document.getElementById(id).style.background = "#ffb6c1"
+    document.getElementById(id2).style.background = "#ffb6c1"
 }
 function mOut2(id, id2) { //função para descolorir
     document.getElementById(id).style.background = "lavender"
