@@ -66,7 +66,7 @@
     </tr>
     <tr>
         <th id="15" onmouseover="mOver2('04','11')" onmouseout="mOut2('04','11')" >Análise e Projeto de Algoritmos</th>
-        <th id="16">Interação Humano-Computador</th>
+        <th id="16" onmouseover="mOver3('06','07')" onmouseout="mOut3('06','07')" >Interação Humano-Computador</th>
         <th id="17">OPTATIVA 2</th>
         <th id="18" onmouseover="mOver('09')" onmouseout="mOut('09')">Banco de Dados</th>
         <th id="19" onmouseover="mOver2('14','10')" onmouseout="mOut2('14','10')" >Projeto de Software</th>
@@ -77,7 +77,7 @@
 <!--Aqui é a parte das funções em JavaScript-->
 
 <script>
-function mOver(id) { //essa é a função de colorir quando o mouse tá em cima
+function mOver(id) { //essa é a função de colorir quando o mouse está em cima
     document.getElementById(id).style.background = "#ffb6c1"
 }
 function mOut(id) { //essa função retorna os quadrados ao seu estado anterior
@@ -89,6 +89,14 @@ function mOver2(id, id2) { //função de colorir
     document.getElementById(id2).style.background = "#ffb6c1"
 }
 function mOut2(id, id2) { //função para descolorir
+    document.getElementById(id).style.background = "lavender"
+    document.getElementById(id2).style.background = "lavender"
+}
+function mOver3(id, id2) { //função de colorir
+    document.getElementById(id).style.background = "#ffb6c1"
+    document.getElementById(id2).style.background = "#ffb6c1"
+}
+function mOut3(id, id2) { //função para descolorir
     document.getElementById(id).style.background = "lavender"
     document.getElementById(id2).style.background = "lavender"
 }
