@@ -12,31 +12,26 @@
             padding:30px;
             border: 1px solid black;
         }
-        h1 {
+        td {
+            font-family: 'Muli', sans-serif;
+            background-color: #ffb6c1;
+            border: 1px solid black;
             margin: 0 auto;
-            padding: 20px 0;    
-            color: #ffb6c1;
+            padding: 40px;    
             text-align: center;
-        }
-        h4 {
-            margin: 0 auto;
-            padding: 20px 0;    
-            color: #ffb6c1;
-            text-align: center;
+            font-weight: bold;
+            font-size: larger;
         }
         html {
             background-color: #111;
         }
         .table {
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
         }
-        table, th {
+        table, th, td {
             border-radius: 10px;
         }
     </style>
-    <h1> Grade curricular </h1>
-    <h4> Ao passar o mouse por cima das matérias, seus pré requisitos mudarão de cor</h4>
 </head>
 <body>
 <!-- Essa parte do código é em HTML, a intenção é colocar cada matéria e seu respectivo
@@ -44,11 +39,18 @@
      função que colore os quadrados-->
 
 <table class="table">
+    <thead>
+        <tr>
+            <td colspan="5">
+                Grade curricular - Engenharia de Software
+            </td>
+        </tr>
+    </thead>
     <tr>
-        <th id="01"> Computação e Sociedade </th>
-        <th id="02"> Introdução a Programação </th>
-        <th id="03"> Cálculo 1 </th>
-        <th id="04"> Fundamentos de Matemática</th>
+        <th colspan="1" id="01"> Computação e Sociedade </th>
+        <th colspan="1" id="02"> Introdução a Programação </th>
+        <th colspan="1" id="03"> Cálculo 1 </th>
+        <th colspan="2" id="04"> Fundamentos da Matemática para computação</th>
     </tr>
      <tr>
         <th id="05" onmouseover="mOver('04')" onmouseout="mOut('04')" >Arquitetura de Computadores</th>
@@ -73,6 +75,12 @@
     </tr>
 </table>
 <p></p>
+
+<div id="table">
+    <div>
+
+    </div>
+</div>
 
 <!--Aqui é a parte das funções em JavaScript-->
 
